@@ -2,6 +2,7 @@ const socket = io();
 const messageContainer = document.getElementById('message-container');
 const messageForm = document.getElementById('send-container');
 const messageInput = document.getElementById('message-input');
+const signedInText = document.getElementById('signed-in-text');
 
 let typingTimeout;
 let isTyping = false;
@@ -60,6 +61,10 @@ function showCustomPrompt() {
 let username;
 showCustomPrompt().then((name) => {
     username = name;
+    
+    // Display "Signed in as: [username]"
+    signedInText.innerHTML = `Signed in as: <strong>${username}</strong>`;
+    
     appendSystemMessage(`${username} joined the chat`);
     socket.emit('new-user', username);
 });

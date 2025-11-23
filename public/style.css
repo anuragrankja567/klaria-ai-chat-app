@@ -37,6 +37,24 @@ h1 {
     letter-spacing: 1px;
 }
 
+.user-info {
+    background: #f8f9fa;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.user-info span {
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+}
+
+.user-info span strong {
+    color: #667eea;
+    font-weight: 600;
+}
+
 #message-container {
     flex: 1;
     overflow-y: auto;
